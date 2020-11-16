@@ -2,6 +2,7 @@ import torch
 
 from models.electra import Electra
 
+
 def __build_model(model_class, ckpt, pretrained=True, device='cpu', progress=True, check_hash=True):
     net = model_class(device=device)
 
@@ -26,6 +27,7 @@ def __build_model(model_class, ckpt, pretrained=True, device='cpu', progress=Tru
 
     return net
 
+
 def electra(pretrained=True, device='cpu', progress=True):
     return __build_model(
         Electra, 
@@ -36,6 +38,7 @@ def electra(pretrained=True, device='cpu', progress=True):
 # @Bruce TODO: write those functions
 def lstm(pretrained=True, device='cpu', progress=True, check_hash=True):
     pass
+
 
 def lstm_sa(pretrained=True, device='cpu', progress=True, check_hash=True):
     pass
